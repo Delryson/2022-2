@@ -5,9 +5,9 @@ PORT = 54321
 
 sckt = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sckt.connect((HOST, PORT))
-sckt.sendall(str.encode('Relôu uôurdi!'))
+sckt.sendall(str.encode('Relôu uôurdi!')) #mensagem enviada automaticamente ao servidor
 
-data = sckt.recv(1024)
+data = sckt.recv(1024) #tamanho do buffer de arquivos
 
-print ('Mensagem enviada: ', data.decode())
+print ('Mensagem enviada: ', data.decode()) #decodificando e exibindo a msg
 
